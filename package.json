@@ -1,0 +1,13 @@
+{
+  "name": "image-viewer",
+  "version": "0.1.0",
+  "description": "Image Viewer",
+  "main": "image-viewer.js",
+  "author": "tu4mo",
+  "repository": "tu4mo/image-viewer.js",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.12.14"
+  },
+  "private": true
+}
