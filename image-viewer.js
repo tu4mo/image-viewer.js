@@ -24,13 +24,15 @@
 		imageViewerElement.classList.remove('active');
 	});
 
-	// Add click event listeners to images
-	Array.prototype.slice.call(document.querySelectorAll('[data-image-viewer]')).map(function(image) {
-		image.addEventListener('click', function(event) {
-			event.preventDefault();
-			imageViewerContentElement.src = this.href;
-			imageViewerElement.classList.add('active');
-			document.body.style.overflow = 'hidden';
+	// Add click event listeners to image links
+	Array.prototype.slice
+		.call(document.querySelectorAll('[data-image-viewer]'))
+		.forEach(function(imageLink) {
+			imageLink.addEventListener('click', function(e) {
+				e.preventDefault();
+				imageViewerContentElement.src = this.href;
+				imageViewerElement.classList.add('active');
+				document.body.style.overflow = 'hidden';
+			});
 		});
-	});
 })(document);
