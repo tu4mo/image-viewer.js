@@ -3,13 +3,16 @@
 
 	var imageViewerElement;
 	var imageViewerContentElement;
-	var viewerTemplate = '' +
+	var viewerStyle = '' +
 		'<style>' +
 			'#imageViewer { background: rgba(255, 255, 255, .95); bottom: 0; cursor: pointer; display: none; left: 0; position: fixed; right: 0; top: 0; z-index: 9999; }' +
 			'#imageViewer.active { display: block; }' +
 			'#imageViewerContent { left: 50%; max-height: calc(100% - 40px); max-width: calc(100% - 40px); position: absolute; top: 50%; transform: translate(-50%, -50%); }' +
-		'</style>' +
-		'<div id="imageViewer"><img id="imageViewerContent"></div>';
+		'</style>';
+	var viewerTemplate = '<div id="imageViewer"><img id="imageViewerContent"></div>';
+
+	// Insert styles before </head>
+	document.head.insertAdjacentHTML('beforeend', viewerStyle);
 
 	// Insert template before </body>
 	document.body.insertAdjacentHTML('beforeend', viewerTemplate);
