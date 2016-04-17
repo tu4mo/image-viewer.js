@@ -27,15 +27,18 @@
 		imageViewerElement.classList.remove('active');
 	});
 
+	// Image click event handler
+	function imageClick(e) {
+		e.preventDefault();
+		imageViewerContentElement.src = this.href;
+		imageViewerElement.classList.add('active');
+		document.body.style.overflow = 'hidden';
+	}
+
 	// Add click event listeners to image links
 	Array.prototype.slice
 		.call(document.querySelectorAll('[data-image-viewer]'))
 		.forEach(function(imageLink) {
-			imageLink.addEventListener('click', function(e) {
-				e.preventDefault();
-				imageViewerContentElement.src = this.href;
-				imageViewerElement.classList.add('active');
-				document.body.style.overflow = 'hidden';
-			});
+			imageLink.addEventListener('click', imageClick);
 		});
 })(document);
