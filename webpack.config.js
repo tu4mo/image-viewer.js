@@ -1,12 +1,12 @@
-var webpack = require("webpack");
+var webpack = require('webpack');
 
 module.exports = {
-	entry: "./image-viewer.js",
+	entry: './image-viewer.js',
 	output: {
 		path: __dirname,
-		filename: "image-viewer.min.js"
+		filename: 'image-viewer.min.js'
 	},
 	plugins: [
-		new webpack.optimize.UglifyJsPlugin({minimize: true})
+		new webpack.optimize.UglifyJsPlugin({ minimize: true })
 	]
 };
