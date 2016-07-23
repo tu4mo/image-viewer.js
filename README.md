@@ -14,6 +14,6 @@ Add images like this:
 
 ```html
 <a href="image.jpg" data-image-viewer>
-	<img src="thumbnail.jpg">
+  <img src="thumbnail.jpg">
 </a>
 ```
